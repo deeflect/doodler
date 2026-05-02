@@ -1,0 +1,1034 @@
+:root.hand-drawn-x {
+  color-scheme: light;
+  background: white !important;
+  --hdx-ink: oklch(18% 0.012 270);
+  --hdx-muted: oklch(50% 0.012 270);
+  --hdx-paper: white;
+  --hdx-paper-2: oklch(96.5% 0 0);
+  --hdx-blue: oklch(66% 0.16 263);
+  --hdx-yellow: oklch(84% 0.085 86);
+  --hdx-line: 1.75px solid var(--hdx-ink);
+  --hdx-radius: 20px 17px 18px 15px / 16px 21px 14px 19px;
+  --hdx-font: "Comic Sans MS", "Comic Sans", "Comic Neue", "Marker Felt", cursive;
+  --hdx-sketch-a: url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' preserveAspectRatio='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.2 1.8 C17 .3 34 1.2 50 .9 C68 .6 84 1.7 98.5 1.2 C99.1 23 98.7 47 99.2 64 C99.6 82 98.9 93 98 98.3 C77 99 60 98.1 44 98.7 C27 99.2 12 98.4 1.4 98.8 C.8 80 1.4 63 .9 45 C.4 28 1.3 14 1.2 1.8 Z' fill='none' stroke='%2324272f' stroke-width='1.45' stroke-linecap='round' stroke-linejoin='round' vector-effect='non-scaling-stroke'/%3E%3C/svg%3E");
+  --hdx-sketch-b: url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' preserveAspectRatio='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M.9 1.1 C20 2 37 .4 54 1.2 C71 2 86 .8 98.8 1.7 C98 19 99.4 36 98.9 53 C98.4 71 99.1 88 98.2 98.1 C78 98.8 61 99.3 42 98.4 C24 97.6 11 99.2 1.5 98.1 C1 80 .7 63 1.3 47 C1.9 28 .6 15 .9 1.1 Z' fill='none' stroke='%2324272f' stroke-width='1.45' stroke-linecap='round' stroke-linejoin='round' vector-effect='non-scaling-stroke'/%3E%3C/svg%3E");
+  --hdx-sketch-c: url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' preserveAspectRatio='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.6 1.4 C15 1 31 1.9 48 .8 C64 -.1 82 1.3 98.4 1.1 C99 17 98.2 33 98.9 50 C99.7 69 98.5 86 98.8 98.6 C82 98.3 65 99.1 48 98.2 C31 97.3 15 99 1.2 98.5 C1.8 84 .6 68 1.1 51 C1.6 35 1.1 18 1.6 1.4 Z' fill='none' stroke='%2324272f' stroke-width='1.45' stroke-linecap='round' stroke-linejoin='round' vector-effect='non-scaling-stroke'/%3E%3C/svg%3E");
+}
+
+:root.hand-drawn-x *,
+:root.hand-drawn-x *::before,
+:root.hand-drawn-x *::after {
+  font-family: var(--hdx-font) !important;
+  letter-spacing: 0 !important;
+  box-sizing: border-box !important;
+}
+
+:root.hand-drawn-x body,
+:root.hand-drawn-x #react-root,
+:root.hand-drawn-x #react-root > div,
+:root.hand-drawn-x main,
+:root.hand-drawn-x header[role="banner"],
+:root.hand-drawn-x [data-testid="primaryColumn"],
+:root.hand-drawn-x [data-testid="sidebarColumn"],
+:root.hand-drawn-x aside[aria-label="Trending"] {
+  background: var(--hdx-paper) !important;
+  color: var(--hdx-ink) !important;
+}
+
+/* X dark mode is class-heavy. Clear its dark surfaces and native separators first. */
+:root.hand-drawn-x #react-root div,
+:root.hand-drawn-x #react-root section,
+:root.hand-drawn-x #react-root article,
+:root.hand-drawn-x #react-root aside,
+:root.hand-drawn-x #react-root nav,
+:root.hand-drawn-x #react-root form {
+  background-color: transparent !important;
+  border-color: transparent !important;
+}
+
+:root.hand-drawn-x a,
+:root.hand-drawn-x span,
+:root.hand-drawn-x p,
+:root.hand-drawn-x h1,
+:root.hand-drawn-x h2,
+:root.hand-drawn-x h3,
+:root.hand-drawn-x h4,
+:root.hand-drawn-x label,
+:root.hand-drawn-x input,
+:root.hand-drawn-x textarea,
+:root.hand-drawn-x [data-text="true"] {
+  color: var(--hdx-ink) !important;
+}
+
+:root.hand-drawn-x [style*="rgb(0, 0, 0)"],
+:root.hand-drawn-x [style*="rgb(21, 32, 43)"],
+:root.hand-drawn-x [style*="rgb(22, 24, 28)"],
+:root.hand-drawn-x [style*="rgb(32, 35, 39)"],
+:root.hand-drawn-x [style*="#000"] {
+  background-color: transparent !important;
+}
+
+:root.hand-drawn-x [role="dialog"],
+:root.hand-drawn-x [role="menu"],
+:root.hand-drawn-x [role="listbox"],
+:root.hand-drawn-x [data-testid="Dropdown"],
+:root.hand-drawn-x [data-testid="HoverCard"] {
+  background: var(--hdx-paper) !important;
+  border: var(--hdx-line) !important;
+  border-radius: var(--hdx-radius) !important;
+  box-shadow: 2px 3px 0 oklch(18% 0.012 270 / 0.14) !important;
+}
+
+:root.hand-drawn-x [data-testid="primaryColumn"],
+:root.hand-drawn-x [data-testid="sidebarColumn"],
+:root.hand-drawn-x aside[aria-label="Trending"],
+:root.hand-drawn-x [data-testid="cellInnerDiv"],
+:root.hand-drawn-x [aria-label="Home timeline"] > div {
+  background-color: var(--hdx-paper) !important;
+}
+
+/* Navigation: keep X layout, only replace the SVG glyphs. */
+:root.hand-drawn-x header[role="banner"] h1 svg {
+  display: none !important;
+}
+
+:root.hand-drawn-x header[role="banner"] h1 a[href="/home"]::before {
+  content: "X";
+  color: var(--hdx-ink);
+  font-size: 36px;
+  font-weight: 800;
+  line-height: 1;
+}
+
+:root.hand-drawn-x .hand-drawn-x-nav-item {
+  position: relative !important;
+  color: var(--hdx-ink) !important;
+  transition: background-color 140ms ease-out, transform 140ms ease-out;
+}
+
+:root.hand-drawn-x .hand-drawn-x-nav-item svg {
+  opacity: 0 !important;
+}
+
+:root.hand-drawn-x .hand-drawn-x-nav-item::before {
+  content: "";
+  position: absolute;
+  left: 13px;
+  top: 50%;
+  width: 30px;
+  height: 30px;
+  transform: translateY(-50%);
+  background: var(--hdx-ink);
+  mask: var(--hdx-icon-url) center / contain no-repeat;
+  -webkit-mask: var(--hdx-icon-url) center / contain no-repeat;
+  pointer-events: none;
+}
+
+:root.hand-drawn-x .hand-drawn-x-nav-item:hover {
+  background: oklch(91% 0.02 88) !important;
+  transform: rotate(-0.4deg);
+}
+
+:root.hand-drawn-x .hand-drawn-x-nav-item:active {
+  transform: rotate(0.4deg) scale(0.99);
+}
+
+/* Buttons and inputs. */
+:root.hand-drawn-x [data-testid="SideNav_NewTweet_Button"],
+:root.hand-drawn-x a[href="/compose/post"],
+:root.hand-drawn-x [data-testid="tweetButton"],
+:root.hand-drawn-x [data-testid="tweetButtonInline"],
+:root.hand-drawn-x [role="button"][aria-label^="Follow @"],
+:root.hand-drawn-x [role="button"][data-testid*="follow"] {
+  background: var(--hdx-ink) !important;
+  border: var(--hdx-line) !important;
+  border-radius: 24px 20px 25px 18px / 20px 25px 18px 23px !important;
+  box-shadow: 2px 3px 0 oklch(18% 0.012 270 / 0.15) !important;
+  color: var(--hdx-paper) !important;
+  transition: transform 140ms ease-out, box-shadow 140ms ease-out;
+}
+
+:root.hand-drawn-x [data-testid="SideNav_NewTweet_Button"] *,
+:root.hand-drawn-x a[href="/compose/post"] *,
+:root.hand-drawn-x [data-testid="tweetButton"] *,
+:root.hand-drawn-x [data-testid="tweetButtonInline"] *,
+:root.hand-drawn-x [role="button"][aria-label^="Follow @"] *,
+:root.hand-drawn-x [role="button"][data-testid*="follow"] * {
+  color: var(--hdx-paper) !important;
+  font-weight: 800 !important;
+}
+
+:root.hand-drawn-x [data-testid="SideNav_NewTweet_Button"]:hover,
+:root.hand-drawn-x a[href="/compose/post"]:hover,
+:root.hand-drawn-x [data-testid="tweetButton"]:hover,
+:root.hand-drawn-x [data-testid="tweetButtonInline"]:hover,
+:root.hand-drawn-x [role="button"][aria-label^="Follow @"]:hover,
+:root.hand-drawn-x [role="button"][data-testid*="follow"]:hover {
+  transform: rotate(-0.7deg) translateY(-1px);
+  box-shadow: 3px 4px 0 oklch(18% 0.012 270 / 0.17) !important;
+}
+
+:root.hand-drawn-x [data-testid="SearchBox_Search_Input"],
+:root.hand-drawn-x input,
+:root.hand-drawn-x [contenteditable="true"][role="textbox"] {
+  background: var(--hdx-paper) !important;
+  color: var(--hdx-ink) !important;
+}
+
+:root.hand-drawn-x [data-testid="SearchBox_Search_Input"] {
+  border: var(--hdx-line) !important;
+  border-radius: 999px !important;
+}
+
+:root.hand-drawn-x [data-testid="SearchBox_Search_Input"]::placeholder,
+:root.hand-drawn-x input::placeholder {
+  color: var(--hdx-muted) !important;
+  opacity: 1 !important;
+}
+
+/* Tabs and composer. */
+:root.hand-drawn-x [role="tablist"] {
+  background: var(--hdx-paper) !important;
+  border-color: transparent !important;
+}
+
+:root.hand-drawn-x [role="tab"][aria-selected="true"] {
+  text-decoration: underline;
+  text-decoration-color: var(--hdx-blue);
+  text-decoration-thickness: 5px;
+  text-underline-offset: 6px;
+}
+
+:root.hand-drawn-x [role="tab"] div[style*="background-color"],
+:root.hand-drawn-x [role="tab"] div[style*="rgb(29, 155, 240)"] {
+  background: var(--hdx-blue) !important;
+  border-radius: 999px !important;
+}
+
+:root.hand-drawn-x [data-testid="tweetTextarea_0"] {
+  min-height: 38px !important;
+  background: transparent !important;
+  border: 0 !important;
+}
+
+:root.hand-drawn-x [data-testid="tweetTextarea_0"] [data-text="true"] {
+  color: var(--hdx-muted) !important;
+}
+
+:root.hand-drawn-x [data-testid="tweetTextarea_0"]::before {
+  content: "";
+  position: absolute;
+  inset: -8px -10px;
+  z-index: -1;
+  border: var(--hdx-line);
+  border-radius: 20px 18px 22px 16px / 18px 22px 16px 20px;
+  background: var(--hdx-paper);
+}
+
+/* Panels: light sketch treatment, not heavy black blocks. */
+:root.hand-drawn-x article[data-testid="tweet"],
+:root.hand-drawn-x [data-testid="sidebarColumn"] section,
+:root.hand-drawn-x aside[aria-label="Trending"] section,
+:root.hand-drawn-x .hand-drawn-x-panel {
+  position: relative !important;
+  background: var(--hdx-paper) !important;
+  border: var(--hdx-line) !important;
+  border-radius: var(--hdx-radius) !important;
+  box-shadow: 1px 2px 0 oklch(18% 0.012 270 / 0.08) !important;
+  overflow: visible !important;
+  transition: transform 140ms ease-out, box-shadow 140ms ease-out;
+}
+
+:root.hand-drawn-x article[data-testid="tweet"]::after,
+:root.hand-drawn-x [data-testid="sidebarColumn"] section::after,
+:root.hand-drawn-x aside[aria-label="Trending"] section::after {
+  content: "";
+  position: absolute;
+  inset: -2px 2px 2px -2px;
+  pointer-events: none;
+  border: 1.25px solid oklch(18% 0.012 270 / 0.72);
+  border-radius: 18px 21px 16px 20px / 20px 16px 21px 17px;
+  transform: rotate(0.12deg);
+}
+
+:root.hand-drawn-x article[data-testid="tweet"] {
+  margin: 8px 8px 12px !important;
+}
+
+:root.hand-drawn-x article[data-testid="tweet"]:hover,
+:root.hand-drawn-x [data-testid="sidebarColumn"] section:hover,
+:root.hand-drawn-x aside[aria-label="Trending"] section:hover {
+  transform: translateY(-1px);
+  box-shadow: 2px 3px 0 oklch(18% 0.012 270 / 0.12) !important;
+}
+
+:root.hand-drawn-x article[data-testid="tweet"] [data-testid="tweetText"] {
+  font-size: 18px !important;
+  line-height: 1.3 !important;
+}
+
+:root.hand-drawn-x article[data-testid="tweet"] [data-testid="tweetText"] a {
+  color: oklch(45% 0.15 263) !important;
+}
+
+/* Media gets a light frame only. */
+:root.hand-drawn-x [data-testid="tweetPhoto"],
+:root.hand-drawn-x [data-testid="card.wrapper"],
+:root.hand-drawn-x [data-testid="videoPlayer"],
+:root.hand-drawn-x article[data-testid="tweet"] [aria-label*="Embedded video"],
+:root.hand-drawn-x article[data-testid="tweet"] [aria-label="Image"] {
+  overflow: hidden !important;
+  border: 1px solid var(--hdx-ink) !important;
+  border-radius: 16px 18px 14px 20px / 18px 14px 20px 16px !important;
+  background: var(--hdx-paper-2) !important;
+  box-shadow: none !important;
+}
+
+:root.hand-drawn-x img,
+:root.hand-drawn-x video {
+  border-radius: inherit !important;
+}
+
+/* Avatars and right rail. */
+:root.hand-drawn-x [data-testid="Tweet-User-Avatar"] img,
+:root.hand-drawn-x [data-testid="SideNav_AccountSwitcher_Button"] img,
+:root.hand-drawn-x [data-testid="UserAvatar-Container-unknown"] img {
+  border: var(--hdx-line) !important;
+  border-radius: 50% !important;
+}
+
+:root.hand-drawn-x [data-testid="trend"],
+:root.hand-drawn-x [data-testid="UserCell"],
+:root.hand-drawn-x [data-testid="sidebarColumn"] section [role="link"],
+:root.hand-drawn-x aside[aria-label="Trending"] section [role="link"] {
+  background: transparent !important;
+  border-color: transparent !important;
+}
+
+:root.hand-drawn-x [data-testid="trend"]::before,
+:root.hand-drawn-x [data-testid="UserCell"]::before {
+  content: "";
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  margin-right: 6px;
+  border: var(--hdx-line);
+  border-radius: 50%;
+  background: var(--hdx-yellow);
+  vertical-align: middle;
+}
+
+/* Action icons: replace glyph, preserve X's spacing/count layout. */
+:root.hand-drawn-x .hand-drawn-x-icon-button {
+  position: relative !important;
+  transition: transform 140ms ease-out, background-color 140ms ease-out;
+}
+
+:root.hand-drawn-x [data-testid="reply"] > div,
+:root.hand-drawn-x [data-testid="retweet"] > div,
+:root.hand-drawn-x [data-testid="like"] > div,
+:root.hand-drawn-x a[href$="/analytics"] > div {
+  gap: 8px !important;
+}
+
+:root.hand-drawn-x .hand-drawn-x-icon-button svg {
+  opacity: 0 !important;
+}
+
+:root.hand-drawn-x .hand-drawn-x-icon-button::before {
+  content: "";
+  position: absolute;
+  left: 1px;
+  top: 50%;
+  width: 20px;
+  height: 20px;
+  transform: translateY(-50%);
+  background: var(--hdx-ink);
+  mask: var(--hdx-icon-url) center / contain no-repeat;
+  -webkit-mask: var(--hdx-icon-url) center / contain no-repeat;
+  pointer-events: none;
+}
+
+:root.hand-drawn-x [data-testid="bookmark"].hand-drawn-x-icon-button::before,
+:root.hand-drawn-x [aria-label="Share post"].hand-drawn-x-icon-button::before {
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+:root.hand-drawn-x .hand-drawn-x-icon-button:hover {
+  background: oklch(91% 0.02 88) !important;
+  transform: rotate(-4deg) scale(1.05);
+}
+
+@supports (border-shape: polygon(0 0, 100% 0, 100% 100%, 0 100%)) {
+  :root.hand-drawn-x article[data-testid="tweet"],
+  :root.hand-drawn-x [data-testid="sidebarColumn"] section,
+  :root.hand-drawn-x aside[aria-label="Trending"] section {
+    border-radius: 0 !important;
+    border-width: 1.4px !important;
+    border-shape: polygon(1.2% 1.8%, 33% 0.8%, 66% 1.3%, 98.5% 1.1%, 99.1% 44%, 98.2% 98.3%, 62% 98.8%, 29% 98.4%, 1.3% 98.7%, 0.9% 50%);
+  }
+
+  :root.hand-drawn-x article[data-testid="tweet"]::after,
+  :root.hand-drawn-x [data-testid="sidebarColumn"] section::after,
+  :root.hand-drawn-x aside[aria-label="Trending"] section::after {
+    display: none;
+  }
+}
+
+/* Final X-specific layer. These selectors intentionally include #react-root to
+   beat X's dark theme classes and the broad cleanup rules above. */
+:root.hand-drawn-x #react-root [data-testid="primaryColumn"],
+:root.hand-drawn-x #react-root [data-testid="sidebarColumn"],
+:root.hand-drawn-x #react-root [data-testid="cellInnerDiv"],
+:root.hand-drawn-x #react-root [aria-label="Home timeline"],
+:root.hand-drawn-x #react-root [aria-label="Trending"],
+:root.hand-drawn-x #react-root [role="main"],
+:root.hand-drawn-x #react-root header[role="banner"] {
+  background: var(--hdx-paper) !important;
+  border-color: transparent !important;
+}
+
+:root.hand-drawn-x #react-root article[data-testid="tweet"],
+:root.hand-drawn-x #react-root [data-testid="sidebarColumn"] section,
+:root.hand-drawn-x #react-root aside[aria-label="Subscribe to Premium"],
+:root.hand-drawn-x #react-root aside[aria-label="Who to follow"],
+:root.hand-drawn-x #react-root [role="region"][aria-label="Trending now"],
+:root.hand-drawn-x #react-root .hand-drawn-x-panel {
+  position: relative !important;
+  isolation: isolate !important;
+  background: var(--hdx-paper) !important;
+  border: 1.65px solid oklch(23% 0.012 270 / 0.92) !important;
+  border-radius: var(--hdx-radius) !important;
+  box-shadow: 1px 2px 0 oklch(18% 0.012 270 / 0.1) !important;
+  overflow: visible !important;
+}
+
+:root.hand-drawn-x #react-root article[data-testid="tweet"]::after,
+:root.hand-drawn-x #react-root [data-testid="sidebarColumn"] section::after,
+:root.hand-drawn-x #react-root aside[aria-label="Subscribe to Premium"]::after,
+:root.hand-drawn-x #react-root aside[aria-label="Who to follow"]::after,
+:root.hand-drawn-x #react-root [role="region"][aria-label="Trending now"]::after,
+:root.hand-drawn-x #react-root .hand-drawn-x-panel::after {
+  content: "";
+  position: absolute;
+  inset: -3px 2px 2px -2px;
+  z-index: 0;
+  pointer-events: none;
+  border: 1.25px solid oklch(23% 0.012 270 / 0.62);
+  border-radius: 18px 22px 17px 21px / 21px 17px 22px 18px;
+  transform: rotate(-0.1deg);
+}
+
+:root.hand-drawn-x #react-root article[data-testid="tweet"] > *,
+:root.hand-drawn-x #react-root [data-testid="sidebarColumn"] section > *,
+:root.hand-drawn-x #react-root aside[aria-label="Subscribe to Premium"] > *,
+:root.hand-drawn-x #react-root aside[aria-label="Who to follow"] > *,
+:root.hand-drawn-x #react-root [role="region"][aria-label="Trending now"] > *,
+:root.hand-drawn-x #react-root .hand-drawn-x-panel > * {
+  position: relative;
+  z-index: 1;
+}
+
+:root.hand-drawn-x #react-root [role="menu"],
+:root.hand-drawn-x #react-root [role="dialog"],
+:root.hand-drawn-x #react-root [role="listbox"],
+:root.hand-drawn-x #react-root [data-testid="Dropdown"],
+:root.hand-drawn-x #react-root [data-testid="HoverCard"],
+:root.hand-drawn-x #react-root [data-testid="HoverCard"] > div {
+  background: var(--hdx-paper) !important;
+  color: var(--hdx-ink) !important;
+  border: 1.65px solid oklch(23% 0.012 270 / 0.9) !important;
+  border-radius: var(--hdx-radius) !important;
+  box-shadow: 2px 3px 0 oklch(18% 0.012 270 / 0.14) !important;
+  opacity: 1 !important;
+  overflow: visible !important;
+  z-index: 2147483647 !important;
+}
+
+:root.hand-drawn-x #react-root [role="menu"] [role="link"],
+:root.hand-drawn-x #react-root [role="menu"] [role="menuitem"],
+:root.hand-drawn-x #react-root [role="menu"] a,
+:root.hand-drawn-x #react-root [data-testid="Dropdown"] [role="link"],
+:root.hand-drawn-x #react-root [data-testid="Dropdown"] [role="menuitem"],
+:root.hand-drawn-x #react-root [data-testid="Dropdown"] a,
+:root.hand-drawn-x #react-root [data-testid="HoverCard"] [role="link"],
+:root.hand-drawn-x #react-root [data-testid="HoverCard"] [role="button"],
+:root.hand-drawn-x #react-root [data-testid="HoverCard"] a {
+  min-height: 48px !important;
+  background: var(--hdx-paper) !important;
+  color: var(--hdx-ink) !important;
+  border-color: transparent !important;
+}
+
+:root.hand-drawn-x #react-root [role="menu"] [role="link"] *,
+:root.hand-drawn-x #react-root [role="menu"] [role="menuitem"] *,
+:root.hand-drawn-x #react-root [role="menu"] a *,
+:root.hand-drawn-x #react-root [data-testid="Dropdown"] *,
+:root.hand-drawn-x #react-root [data-testid="HoverCard"] * {
+  color: var(--hdx-ink) !important;
+}
+
+:root.hand-drawn-x #react-root [role="menu"] [role="link"]:hover,
+:root.hand-drawn-x #react-root [role="menu"] [role="menuitem"]:hover,
+:root.hand-drawn-x #react-root [role="menu"] a:hover,
+:root.hand-drawn-x #react-root [data-testid="Dropdown"] [role="link"]:hover,
+:root.hand-drawn-x #react-root [data-testid="Dropdown"] [role="menuitem"]:hover,
+:root.hand-drawn-x #react-root [data-testid="Dropdown"] a:hover,
+:root.hand-drawn-x #react-root [data-testid="HoverCard"] [role="link"]:hover,
+:root.hand-drawn-x #react-root [data-testid="HoverCard"] [role="button"]:hover,
+:root.hand-drawn-x #react-root [data-testid="HoverCard"] a:hover {
+  background: oklch(93% 0.015 88) !important;
+}
+
+:root.hand-drawn-x #react-root [data-testid="toolBar"],
+:root.hand-drawn-x #react-root [data-testid="toolBar"] > div,
+:root.hand-drawn-x #react-root [data-testid="toolBar"] [role="button"],
+:root.hand-drawn-x #react-root [data-testid="tweetTextarea_0"],
+:root.hand-drawn-x #react-root form[role="search"],
+:root.hand-drawn-x #react-root [data-testid="SearchBox_Search_Input"],
+:root.hand-drawn-x #react-root [data-testid="SearchBox_Search_Input"] ~ *,
+:root.hand-drawn-x #react-root [data-testid="SearchBox_Search_Input"] * {
+  background: var(--hdx-paper) !important;
+  color: var(--hdx-ink) !important;
+}
+
+:root.hand-drawn-x #react-root [data-testid="reply"] > div,
+:root.hand-drawn-x #react-root [data-testid="retweet"] > div,
+:root.hand-drawn-x #react-root [data-testid="like"] > div,
+:root.hand-drawn-x #react-root a[href$="/analytics"] > div {
+  column-gap: 12px !important;
+  gap: 12px !important;
+}
+
+:root.hand-drawn-x #react-root .hand-drawn-x-icon-button svg {
+  margin-right: 12px !important;
+}
+
+:root.hand-drawn-x ::selection {
+  background: oklch(88% 0.075 292) !important;
+  color: var(--hdx-ink) !important;
+}
+
+:root.hand-drawn-x-disabled {
+  color-scheme: normal;
+}
+
+@keyframes hand-drawn-x-hover-wiggle {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  45% {
+    transform: translateY(-1px) rotate(-0.45deg);
+  }
+  100% {
+    transform: translateY(0) rotate(0.18deg);
+  }
+}
+
+/* Polish pass: single-line sketch borders, no color-fill hover states. */
+:root.hand-drawn-x #react-root article[data-testid="tweet"],
+:root.hand-drawn-x #react-root [data-testid="sidebarColumn"] section,
+:root.hand-drawn-x #react-root aside[aria-label="Subscribe to Premium"],
+:root.hand-drawn-x #react-root aside[aria-label="Who to follow"],
+:root.hand-drawn-x #react-root [role="region"][aria-label="Trending now"],
+:root.hand-drawn-x #react-root .hand-drawn-x-panel,
+:root.hand-drawn-x #react-root [role="menu"],
+:root.hand-drawn-x #react-root [role="dialog"],
+:root.hand-drawn-x #react-root [role="listbox"],
+:root.hand-drawn-x #react-root [data-testid="Dropdown"],
+:root.hand-drawn-x #react-root [data-testid="HoverCard"],
+:root.hand-drawn-x #react-root [data-testid="HoverCard"] > div {
+  border: 1px solid transparent !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+:root.hand-drawn-x #react-root article[data-testid="tweet"]::after,
+:root.hand-drawn-x #react-root [data-testid="sidebarColumn"] section::after,
+:root.hand-drawn-x #react-root aside[aria-label="Subscribe to Premium"]::after,
+:root.hand-drawn-x #react-root aside[aria-label="Who to follow"]::after,
+:root.hand-drawn-x #react-root [role="region"][aria-label="Trending now"]::after,
+:root.hand-drawn-x #react-root .hand-drawn-x-panel::after,
+:root.hand-drawn-x #react-root [role="menu"]::after,
+:root.hand-drawn-x #react-root [role="dialog"]::after,
+:root.hand-drawn-x #react-root [role="listbox"]::after,
+:root.hand-drawn-x #react-root [data-testid="HoverCard"]::after {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  z-index: 0;
+  pointer-events: none;
+  border: 0 !important;
+  background: var(--hdx-sketch-a) center / 100% 100% no-repeat;
+  opacity: 0.96;
+  transform: none;
+}
+
+:root.hand-drawn-x #react-root .hand-drawn-x-sketch-1::after {
+  background-image: var(--hdx-sketch-b);
+}
+
+:root.hand-drawn-x #react-root .hand-drawn-x-sketch-2::after {
+  background-image: var(--hdx-sketch-c);
+}
+
+:root.hand-drawn-x #react-root [role="menu"],
+:root.hand-drawn-x #react-root [role="dialog"],
+:root.hand-drawn-x #react-root [role="listbox"],
+:root.hand-drawn-x #react-root [data-testid="Dropdown"],
+:root.hand-drawn-x #react-root [data-testid="HoverCard"] {
+  isolation: isolate !important;
+}
+
+:root.hand-drawn-x #react-root [data-testid="Dropdown"] {
+  border: 0 !important;
+}
+
+:root.hand-drawn-x #react-root [data-testid="Dropdown"]::after {
+  display: none !important;
+}
+
+@supports (border-shape: polygon(0 0, 100% 0, 100% 100%, 0 100%)) {
+  :root.hand-drawn-x #react-root article[data-testid="tweet"],
+  :root.hand-drawn-x #react-root [data-testid="sidebarColumn"] section,
+  :root.hand-drawn-x #react-root aside[aria-label="Subscribe to Premium"],
+  :root.hand-drawn-x #react-root aside[aria-label="Who to follow"],
+  :root.hand-drawn-x #react-root [role="region"][aria-label="Trending now"],
+  :root.hand-drawn-x #react-root .hand-drawn-x-panel,
+  :root.hand-drawn-x #react-root [role="menu"],
+  :root.hand-drawn-x #react-root [role="dialog"],
+  :root.hand-drawn-x #react-root [role="listbox"],
+  :root.hand-drawn-x #react-root [data-testid="HoverCard"] {
+    border: 1.35px solid oklch(23% 0.012 270 / 0.92) !important;
+    border-radius: 0 !important;
+    border-shape: polygon(1.2% 1.8%, 33% 0.8%, 66% 1.3%, 98.5% 1.1%, 99.1% 44%, 98.2% 98.3%, 62% 98.8%, 29% 98.4%, 1.3% 98.7%, 0.9% 50%);
+  }
+
+  :root.hand-drawn-x #react-root article[data-testid="tweet"]::after,
+  :root.hand-drawn-x #react-root [data-testid="sidebarColumn"] section::after,
+  :root.hand-drawn-x #react-root aside[aria-label="Subscribe to Premium"]::after,
+  :root.hand-drawn-x #react-root aside[aria-label="Who to follow"]::after,
+  :root.hand-drawn-x #react-root [role="region"][aria-label="Trending now"]::after,
+  :root.hand-drawn-x #react-root .hand-drawn-x-panel::after,
+  :root.hand-drawn-x #react-root [role="menu"]::after,
+  :root.hand-drawn-x #react-root [role="dialog"]::after,
+  :root.hand-drawn-x #react-root [role="listbox"]::after,
+  :root.hand-drawn-x #react-root [data-testid="HoverCard"]::after {
+    display: none !important;
+  }
+}
+
+:root.hand-drawn-x #react-root [data-testid="primaryColumn"] > div:first-child,
+:root.hand-drawn-x #react-root [data-testid="primaryColumn"] [style*="backdrop-filter"],
+:root.hand-drawn-x #react-root [data-testid="primaryColumn"] [style*="-webkit-backdrop-filter"],
+:root.hand-drawn-x #react-root [role="tablist"],
+:root.hand-drawn-x #react-root [role="tab"] {
+  background: var(--hdx-paper) !important;
+  background-color: var(--hdx-paper) !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  box-shadow: none !important;
+}
+
+:root.hand-drawn-x #react-root [role="tab"],
+:root.hand-drawn-x #react-root [role="tab"] *,
+:root.hand-drawn-x #react-root [role="tab"][aria-selected="true"],
+:root.hand-drawn-x #react-root [role="tab"][aria-selected="true"] * {
+  color: var(--hdx-ink) !important;
+  opacity: 1 !important;
+  -webkit-text-fill-color: var(--hdx-ink) !important;
+}
+
+:root.hand-drawn-x #react-root .hand-drawn-x-nav-item:hover,
+:root.hand-drawn-x #react-root article[data-testid="tweet"]:hover,
+:root.hand-drawn-x #react-root .hand-drawn-x-panel:hover,
+:root.hand-drawn-x #react-root .hand-drawn-x-icon-button:hover,
+:root.hand-drawn-x #react-root [data-testid="trend"]:hover,
+:root.hand-drawn-x #react-root [data-testid="UserCell"]:hover,
+:root.hand-drawn-x #react-root [role="menu"] a:hover,
+:root.hand-drawn-x #react-root [role="menu"] [role="menuitem"]:hover,
+:root.hand-drawn-x #react-root [data-testid="Dropdown"] a:hover,
+:root.hand-drawn-x #react-root [data-testid="HoverCard"] a:hover,
+:root.hand-drawn-x #react-root [data-testid="HoverCard"] [role="button"]:hover {
+  background: transparent !important;
+  background-color: transparent !important;
+  box-shadow: none !important;
+  animation: hand-drawn-x-hover-wiggle 180ms ease-out both;
+}
+
+:root.hand-drawn-x #react-root article[data-testid="tweet"]:hover,
+:root.hand-drawn-x #react-root .hand-drawn-x-panel:hover {
+  background: var(--hdx-paper) !important;
+  background-color: var(--hdx-paper) !important;
+}
+
+:root.hand-drawn-x #react-root [role="menu"] a:hover,
+:root.hand-drawn-x #react-root [role="menu"] [role="menuitem"]:hover,
+:root.hand-drawn-x #react-root [data-testid="Dropdown"] a:hover,
+:root.hand-drawn-x #react-root [data-testid="HoverCard"] a:hover,
+:root.hand-drawn-x #react-root [data-testid="HoverCard"] [role="button"]:hover {
+  transform-origin: left center;
+}
+
+:root.hand-drawn-x #react-root [data-testid="tweetButton"],
+:root.hand-drawn-x #react-root [data-testid="tweetButtonInline"],
+:root.hand-drawn-x #react-root [data-testid="SideNav_NewTweet_Button"],
+:root.hand-drawn-x #react-root a[href="/compose/post"] {
+  background: var(--hdx-ink) !important;
+  background-color: var(--hdx-ink) !important;
+  color: var(--hdx-paper) !important;
+  opacity: 1 !important;
+  -webkit-text-fill-color: var(--hdx-paper) !important;
+}
+
+:root.hand-drawn-x #react-root [data-testid="tweetButton"] *,
+:root.hand-drawn-x #react-root [data-testid="tweetButtonInline"] *,
+:root.hand-drawn-x #react-root [data-testid="SideNav_NewTweet_Button"] *,
+:root.hand-drawn-x #react-root a[href="/compose/post"] * {
+  color: var(--hdx-paper) !important;
+  -webkit-text-fill-color: var(--hdx-paper) !important;
+}
+
+:root.hand-drawn-x #react-root [data-testid="tweetButton"][aria-disabled="true"],
+:root.hand-drawn-x #react-root [data-testid="tweetButtonInline"][aria-disabled="true"],
+:root.hand-drawn-x #react-root [data-testid="tweetButton"]:disabled,
+:root.hand-drawn-x #react-root [data-testid="tweetButtonInline"]:disabled {
+  background: var(--hdx-paper) !important;
+  background-color: var(--hdx-paper) !important;
+  color: var(--hdx-ink) !important;
+  border: 1.35px solid var(--hdx-ink) !important;
+  opacity: 1 !important;
+  -webkit-text-fill-color: var(--hdx-ink) !important;
+}
+
+:root.hand-drawn-x #react-root [data-testid="tweetButton"][aria-disabled="true"] *,
+:root.hand-drawn-x #react-root [data-testid="tweetButtonInline"][aria-disabled="true"] *,
+:root.hand-drawn-x #react-root [data-testid="tweetButton"]:disabled *,
+:root.hand-drawn-x #react-root [data-testid="tweetButtonInline"]:disabled * {
+  color: var(--hdx-ink) !important;
+  -webkit-text-fill-color: var(--hdx-ink) !important;
+}
+
+/* Portal-safe popups and late X hover states. */
+:root.hand-drawn-x [role="menu"],
+:root.hand-drawn-x [role="dialog"],
+:root.hand-drawn-x [role="listbox"],
+:root.hand-drawn-x [data-testid="HoverCard"] {
+  background: var(--hdx-paper) !important;
+  background-color: var(--hdx-paper) !important;
+  color: var(--hdx-ink) !important;
+  border: 1px solid transparent !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  isolation: isolate !important;
+  overflow: visible !important;
+}
+
+:root.hand-drawn-x [data-testid="Dropdown"] {
+  background: var(--hdx-paper) !important;
+  background-color: var(--hdx-paper) !important;
+  color: var(--hdx-ink) !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+:root.hand-drawn-x [role="menu"]::after,
+:root.hand-drawn-x [role="dialog"]::after,
+:root.hand-drawn-x [role="listbox"]::after,
+:root.hand-drawn-x [data-testid="HoverCard"]::after {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  z-index: 0;
+  pointer-events: none;
+  border: 0 !important;
+  background: var(--hdx-sketch-b) center / 100% 100% no-repeat;
+  opacity: 0.96;
+}
+
+:root.hand-drawn-x [role="menu"] > *,
+:root.hand-drawn-x [role="dialog"] > *,
+:root.hand-drawn-x [role="listbox"] > *,
+:root.hand-drawn-x [data-testid="HoverCard"] > * {
+  position: relative;
+  z-index: 1;
+}
+
+:root.hand-drawn-x [role="menu"] a,
+:root.hand-drawn-x [role="menu"] [role="link"],
+:root.hand-drawn-x [role="menu"] [role="menuitem"],
+:root.hand-drawn-x [data-testid="Dropdown"] a,
+:root.hand-drawn-x [data-testid="Dropdown"] [role="link"],
+:root.hand-drawn-x [data-testid="Dropdown"] [role="menuitem"],
+:root.hand-drawn-x [data-testid="HoverCard"] a,
+:root.hand-drawn-x [data-testid="HoverCard"] [role="button"],
+:root.hand-drawn-x [data-testid="HoverCard"] [role="menuitem"] {
+  background: transparent !important;
+  background-color: transparent !important;
+  color: var(--hdx-ink) !important;
+}
+
+:root.hand-drawn-x [role="menu"] a:hover,
+:root.hand-drawn-x [role="menu"] [role="link"]:hover,
+:root.hand-drawn-x [role="menu"] [role="menuitem"]:hover,
+:root.hand-drawn-x [data-testid="Dropdown"] a:hover,
+:root.hand-drawn-x [data-testid="Dropdown"] [role="link"]:hover,
+:root.hand-drawn-x [data-testid="Dropdown"] [role="menuitem"]:hover,
+:root.hand-drawn-x [data-testid="HoverCard"] a:hover,
+:root.hand-drawn-x [data-testid="HoverCard"] [role="button"]:hover,
+:root.hand-drawn-x [data-testid="HoverCard"] [role="menuitem"]:hover {
+  background: transparent !important;
+  background-color: transparent !important;
+  animation: hand-drawn-x-hover-wiggle 180ms ease-out both;
+}
+
+@supports (border-shape: polygon(0 0, 100% 0, 100% 100%, 0 100%)) {
+  :root.hand-drawn-x [role="menu"],
+  :root.hand-drawn-x [role="dialog"],
+  :root.hand-drawn-x [role="listbox"],
+  :root.hand-drawn-x [data-testid="HoverCard"] {
+    border: 1.35px solid oklch(23% 0.012 270 / 0.92) !important;
+    border-shape: polygon(1.2% 1.8%, 33% 0.8%, 66% 1.3%, 98.5% 1.1%, 99.1% 44%, 98.2% 98.3%, 62% 98.8%, 29% 98.4%, 1.3% 98.7%, 0.9% 50%);
+  }
+
+  :root.hand-drawn-x [role="menu"]::after,
+  :root.hand-drawn-x [role="dialog"]::after,
+  :root.hand-drawn-x [role="listbox"]::after,
+  :root.hand-drawn-x [data-testid="HoverCard"]::after {
+    display: none !important;
+  }
+}
+
+:root.hand-drawn-x #react-root [data-testid="toolBar"] [aria-disabled="true"],
+:root.hand-drawn-x #react-root [data-testid="toolBar"] [style*="backdrop-filter"],
+:root.hand-drawn-x #react-root [data-testid="toolBar"] [style*="-webkit-backdrop-filter"] {
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+
+:root.hand-drawn-x #react-root [role="menu"] a:hover,
+:root.hand-drawn-x #react-root [role="menu"] [role="link"]:hover,
+:root.hand-drawn-x #react-root [role="menu"] [role="menuitem"]:hover,
+:root.hand-drawn-x #react-root [data-testid="Dropdown"] a:hover,
+:root.hand-drawn-x #react-root [data-testid="Dropdown"] [role="link"]:hover,
+:root.hand-drawn-x #react-root [data-testid="Dropdown"] [role="menuitem"]:hover,
+:root.hand-drawn-x #react-root [data-testid="HoverCard"] a:hover,
+:root.hand-drawn-x #react-root [data-testid="HoverCard"] [role="button"]:hover,
+:root.hand-drawn-x #react-root [data-testid="HoverCard"] [role="menuitem"]:hover {
+  background: transparent !important;
+  background-color: transparent !important;
+  animation: hand-drawn-x-hover-wiggle 180ms ease-out both;
+}
+
+/* Final spacing/border pass: bordered surfaces need paper margin inside the line. */
+:root.hand-drawn-x #react-root article[data-testid="tweet"],
+:root.hand-drawn-x #react-root [data-testid="sidebarColumn"] section,
+:root.hand-drawn-x #react-root aside[aria-label="Subscribe to Premium"],
+:root.hand-drawn-x #react-root aside[aria-label="Who to follow"],
+:root.hand-drawn-x #react-root [role="region"][aria-label="Trending now"],
+:root.hand-drawn-x #react-root .hand-drawn-x-panel {
+  padding: 10px 12px !important;
+  background-clip: padding-box !important;
+}
+
+:root.hand-drawn-x [role="menu"],
+:root.hand-drawn-x [role="dialog"],
+:root.hand-drawn-x [role="listbox"],
+:root.hand-drawn-x [data-testid="HoverCard"],
+:root.hand-drawn-x #react-root [role="menu"],
+:root.hand-drawn-x #react-root [role="dialog"],
+:root.hand-drawn-x #react-root [role="listbox"],
+:root.hand-drawn-x #react-root [data-testid="HoverCard"] {
+  border: 1.35px solid oklch(23% 0.012 270 / 0.92) !important;
+  padding: 6px !important;
+  background: var(--hdx-paper) !important;
+  background-color: var(--hdx-paper) !important;
+  background-clip: padding-box !important;
+}
+
+:root.hand-drawn-x [data-testid="HoverCard"] > div,
+:root.hand-drawn-x #react-root [data-testid="HoverCard"] > div {
+  border: 0 !important;
+  padding: 4px !important;
+}
+
+:root.hand-drawn-x [data-testid="Dropdown"],
+:root.hand-drawn-x #react-root [data-testid="Dropdown"] {
+  padding: 4px !important;
+}
+
+/* Current pass: vary sketch frames, give bordered content breathing room, and
+   catch portal/toast surfaces that X renders outside the main column. */
+:root.hand-drawn-x {
+  --hdx-sketch-d: url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' preserveAspectRatio='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.1 2.2 C18 .7 35 1.8 51 .6 C69 -.3 83 .9 98.7 1.5 C98.2 21 99.5 38 98.6 56 C97.8 74 99.2 88 97.9 98.4 C80 98.9 63 97.7 46 98.6 C29 99.5 14 98.1 1.7 98.9 C.6 82 1.9 65 1 48 C.1 30 1.6 15 1.1 2.2 Z' fill='none' stroke='%2324272f' stroke-width='1.45' stroke-linecap='round' stroke-linejoin='round' vector-effect='non-scaling-stroke'/%3E%3C/svg%3E");
+  --hdx-sketch-e: url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' preserveAspectRatio='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.8 .9 C16 1.6 31 .5 49 1.4 C67 2.3 84 .2 98.2 1.9 C99.3 19 98.1 34 99.1 52 C100 70 98.4 85 98.8 97.8 C83 99.1 67 98.2 49 99 C32 99.7 17 98.6 1.1 98.2 C1.5 78 .7 61 1.6 43 C2.5 26 .8 13 1.8 .9 Z' fill='none' stroke='%2324272f' stroke-width='1.45' stroke-linecap='round' stroke-linejoin='round' vector-effect='non-scaling-stroke'/%3E%3C/svg%3E");
+  --hdx-sketch-f: url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' preserveAspectRatio='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M.8 1.7 C19 1 36 2.1 53 .9 C70 -.2 86 1.5 99 1.2 C98.5 18 99.2 35 98.7 51 C98.2 68 99.6 84 98.1 98.8 C80 98.1 64 99.4 47 98.5 C30 97.6 14 99.1 1.6 98.3 C.9 81 1.4 66 .7 49 C0 31 1.5 16 .8 1.7 Z' fill='none' stroke='%2324272f' stroke-width='1.45' stroke-linecap='round' stroke-linejoin='round' vector-effect='non-scaling-stroke'/%3E%3C/svg%3E");
+}
+
+:root.hand-drawn-x #react-root article[data-testid="tweet"],
+:root.hand-drawn-x #react-root [data-testid="sidebarColumn"] section,
+:root.hand-drawn-x #react-root aside[aria-label="Subscribe to Premium"],
+:root.hand-drawn-x #react-root aside[aria-label="Who to follow"],
+:root.hand-drawn-x #react-root [role="region"][aria-label="Trending now"],
+:root.hand-drawn-x #react-root .hand-drawn-x-panel {
+  padding: 15px 16px 13px !important;
+}
+
+:root.hand-drawn-x #react-root article[data-testid="tweet"] {
+  margin: 10px 10px 14px !important;
+}
+
+:root.hand-drawn-x .hand-drawn-x-floating-surface,
+:root.hand-drawn-x #react-root .hand-drawn-x-floating-surface {
+  background: var(--hdx-paper) !important;
+  background-color: var(--hdx-paper) !important;
+  color: var(--hdx-ink) !important;
+  border: 1px solid transparent !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  isolation: isolate !important;
+  overflow: visible !important;
+  padding: 7px !important;
+  background-clip: padding-box !important;
+}
+
+:root.hand-drawn-x [data-testid="Dropdown"].hand-drawn-x-floating-surface,
+:root.hand-drawn-x #react-root [data-testid="Dropdown"].hand-drawn-x-floating-surface {
+  position: relative !important;
+}
+
+:root.hand-drawn-x .hand-drawn-x-floating-surface::after,
+:root.hand-drawn-x #react-root .hand-drawn-x-floating-surface::after {
+  content: "";
+  display: block !important;
+  position: absolute;
+  inset: -2px;
+  z-index: 0;
+  pointer-events: none;
+  border: 0 !important;
+  background: var(--hdx-sketch-a) center / 100% 100% no-repeat;
+  opacity: 0.96;
+}
+
+:root.hand-drawn-x .hand-drawn-x-floating-surface > *,
+:root.hand-drawn-x #react-root .hand-drawn-x-floating-surface > * {
+  position: relative;
+  z-index: 1;
+}
+
+:root.hand-drawn-x .hand-drawn-x-sketch-0::after,
+:root.hand-drawn-x #react-root .hand-drawn-x-sketch-0::after {
+  background-image: var(--hdx-sketch-a) !important;
+}
+
+:root.hand-drawn-x .hand-drawn-x-sketch-1::after,
+:root.hand-drawn-x #react-root .hand-drawn-x-sketch-1::after {
+  background-image: var(--hdx-sketch-b) !important;
+}
+
+:root.hand-drawn-x .hand-drawn-x-sketch-2::after,
+:root.hand-drawn-x #react-root .hand-drawn-x-sketch-2::after {
+  background-image: var(--hdx-sketch-c) !important;
+}
+
+:root.hand-drawn-x .hand-drawn-x-sketch-3::after,
+:root.hand-drawn-x #react-root .hand-drawn-x-sketch-3::after {
+  background-image: var(--hdx-sketch-d) !important;
+}
+
+:root.hand-drawn-x .hand-drawn-x-sketch-4::after,
+:root.hand-drawn-x #react-root .hand-drawn-x-sketch-4::after {
+  background-image: var(--hdx-sketch-e) !important;
+}
+
+:root.hand-drawn-x .hand-drawn-x-sketch-5::after,
+:root.hand-drawn-x #react-root .hand-drawn-x-sketch-5::after {
+  background-image: var(--hdx-sketch-f) !important;
+}
+
+:root.hand-drawn-x .hand-drawn-x-posted-toast,
+:root.hand-drawn-x #react-root .hand-drawn-x-posted-toast {
+  min-height: 44px !important;
+  background: var(--hdx-paper) !important;
+  background-color: var(--hdx-paper) !important;
+  color: var(--hdx-ink) !important;
+}
+
+:root.hand-drawn-x .hand-drawn-x-posted-toast *,
+:root.hand-drawn-x #react-root .hand-drawn-x-posted-toast * {
+  background-color: transparent !important;
+  color: var(--hdx-ink) !important;
+  -webkit-text-fill-color: var(--hdx-ink) !important;
+}
+
+@supports (border-shape: polygon(0 0, 100% 0, 100% 100%, 0 100%)) {
+  :root.hand-drawn-x .hand-drawn-x-floating-surface,
+  :root.hand-drawn-x #react-root .hand-drawn-x-floating-surface {
+    border: 1.35px solid oklch(23% 0.012 270 / 0.92) !important;
+    border-shape: var(--hdx-border-shape, polygon(1.2% 1.8%, 33% 0.8%, 66% 1.3%, 98.5% 1.1%, 99.1% 44%, 98.2% 98.3%, 62% 98.8%, 29% 98.4%, 1.3% 98.7%, 0.9% 50%)) !important;
+  }
+
+  :root.hand-drawn-x .hand-drawn-x-floating-surface::after,
+  :root.hand-drawn-x #react-root .hand-drawn-x-floating-surface::after {
+    display: none !important;
+  }
+
+  :root.hand-drawn-x .hand-drawn-x-sketch-1,
+  :root.hand-drawn-x #react-root .hand-drawn-x-sketch-1 {
+    border-shape: polygon(.9% 1.1%, 20% 2%, 37% .4%, 54% 1.2%, 71% 2%, 98.8% 1.7%, 98.9% 53%, 98.2% 98.1%, 42% 98.4%, 1.5% 98.1%, 1.3% 47%);
+  }
+
+  :root.hand-drawn-x .hand-drawn-x-sketch-2,
+  :root.hand-drawn-x #react-root .hand-drawn-x-sketch-2 {
+    border-shape: polygon(1.6% 1.4%, 31% 1.9%, 48% .8%, 64% -.1%, 98.4% 1.1%, 98.9% 50%, 98.8% 98.6%, 48% 98.2%, 1.2% 98.5%, 1.1% 51%);
+  }
+
+  :root.hand-drawn-x .hand-drawn-x-sketch-3,
+  :root.hand-drawn-x #react-root .hand-drawn-x-sketch-3 {
+    border-shape: polygon(1.1% 2.2%, 35% 1.8%, 51% .6%, 98.7% 1.5%, 98.6% 56%, 97.9% 98.4%, 46% 98.6%, 1.7% 98.9%, 1% 48%);
+  }
+
+  :root.hand-drawn-x .hand-drawn-x-sketch-4,
+  :root.hand-drawn-x #react-root .hand-drawn-x-sketch-4 {
+    border-shape: polygon(1.8% .9%, 31% .5%, 49% 1.4%, 98.2% 1.9%, 99.1% 52%, 98.8% 97.8%, 49% 99%, 1.1% 98.2%, 1.6% 43%);
+  }
+
+  :root.hand-drawn-x .hand-drawn-x-sketch-5,
+  :root.hand-drawn-x #react-root .hand-drawn-x-sketch-5 {
+    border-shape: polygon(.8% 1.7%, 36% 2.1%, 53% .9%, 99% 1.2%, 98.7% 51%, 98.1% 98.8%, 47% 98.5%, 1.6% 98.3%, .7% 49%);
+  }
+}
+
+/* Strongest border-shape pass. X's generated article selectors have high
+   specificity, so keep the randomized shape in a custom property here. */
+@supports (border-shape: polygon(0 0, 100% 0, 100% 100%, 0 100%)) {
+  :root.hand-drawn-x #react-root article[data-testid="tweet"].hand-drawn-x-panel,
+  :root.hand-drawn-x #react-root [data-testid="sidebarColumn"] section.hand-drawn-x-panel,
+  :root.hand-drawn-x #react-root aside[aria-label="Subscribe to Premium"].hand-drawn-x-panel,
+  :root.hand-drawn-x #react-root aside[aria-label="Who to follow"].hand-drawn-x-panel,
+  :root.hand-drawn-x #react-root [role="region"][aria-label="Trending now"].hand-drawn-x-panel,
+  :root.hand-drawn-x #react-root .hand-drawn-x-panel,
+  :root.hand-drawn-x .hand-drawn-x-floating-surface,
+  :root.hand-drawn-x #react-root .hand-drawn-x-floating-surface {
+    border: 1.35px solid oklch(23% 0.012 270 / 0.92) !important;
+    border-shape: var(--hdx-border-shape, polygon(1.2% 1.8%, 33% 0.8%, 66% 1.3%, 98.5% 1.1%, 99.1% 44%, 98.2% 98.3%, 62% 98.8%, 29% 98.4%, 1.3% 98.7%, 0.9% 50%)) !important;
+  }
+}
+
+:root.hand-drawn-x #react-root [data-testid="tweetButton"]:not([aria-disabled="true"]):not(:disabled),
+:root.hand-drawn-x #react-root [data-testid="tweetButtonInline"]:not([aria-disabled="true"]):not(:disabled) {
+  background: var(--hdx-ink) !important;
+  background-color: var(--hdx-ink) !important;
+  border: 1.35px solid var(--hdx-ink) !important;
+  color: var(--hdx-paper) !important;
+  opacity: 1 !important;
+  -webkit-text-fill-color: var(--hdx-paper) !important;
+}
+
+:root.hand-drawn-x #react-root [data-testid="tweetButton"]:not([aria-disabled="true"]):not(:disabled) *,
+:root.hand-drawn-x #react-root [data-testid="tweetButtonInline"]:not([aria-disabled="true"]):not(:disabled) * {
+  color: var(--hdx-paper) !important;
+  opacity: 1 !important;
+  -webkit-text-fill-color: var(--hdx-paper) !important;
+}

@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Doodler</title>
+    <link rel="stylesheet" href="src/popup.css">
+  </head>
+  <body>
+    <main>
+      <header class="hero">
+        <p class="eyebrow">Doodler</p>
+        <h1>Make X sketchy.</h1>
+      </header>
+
+      <section class="panel" aria-label="Doodler settings">
+        <label class="toggle">
+          <span>
+            <strong>Sketch mode</strong>
+            <small>Doodle borders, icons, and paper UI on X.</small>
+          </span>
+          <input id="enabled" type="checkbox">
+          <span class="switch" aria-hidden="true">
+            <span class="switch-thumb"></span>
+          </span>
+        </label>
+
+        <nav class="links" aria-label="Doodler links">
+          <a href="https://doodler.deeflect.com" target="_blank" rel="noreferrer">Website</a>
+          <a href="https://github.com/deeflect/doodler" target="_blank" rel="noreferrer">GitHub</a>
+        </nav>
+      </section>
+    </main>
+    <script src="src/popup.js"></script>
+  </body>
+</html>

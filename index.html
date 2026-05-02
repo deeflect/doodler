@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Doodler. X, but somebody drew on it.</title>
+    <meta
+      name="description"
+      content="Doodler is a tiny Chrome extension that paints over X with paper, doodle icons, Comic Sans, and wobbly borders. The posts remain. The eye strain does not."
+    >
+    <meta name="robots" content="index,follow">
+    <link rel="canonical" href="https://doodler.deeflect.com/">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://doodler.deeflect.com/">
+    <meta property="og:title" content="Doodler. X, but doodled.">
+    <meta property="og:description" content="Before: eww, disgusting. After: wow, paper. Finally emotionally safe to open X. Probably.">
+    <meta property="og:image" content="https://doodler.deeflect.com/assets/screenshots/og-image.webp">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Doodler. X, but doodled.">
+    <meta name="twitter:description" content="A Chrome extension that draws over X until it stops being scary. Mostly.">
+    <meta name="twitter:image" content="https://doodler.deeflect.com/assets/screenshots/og-image.webp">
+    <meta name="theme-color" content="#f8f7ef">
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "SoftwareApplication",
+            "@id": "https://doodler.deeflect.com/#app",
+            "name": "Doodler",
+            "url": "https://doodler.deeflect.com/",
+            "description": "A tiny Chrome extension that makes X/Twitter look like a sketchy paper interface.",
+            "applicationCategory": "BrowserApplication",
+            "applicationSubCategory": "Chrome extension",
+            "operatingSystem": "Chrome",
+            "image": "https://doodler.deeflect.com/assets/screenshots/og-image.webp",
+            "screenshot": [
+              "https://doodler.deeflect.com/assets/screenshots/before.webp",
+              "https://doodler.deeflect.com/assets/screenshots/after.webp"
+            ],
+            "downloadUrl": "https://doodler.deeflect.com/dist/doodler-extension.zip",
+            "codeRepository": "https://github.com/deeflect/doodler",
+            "creator": { "@id": "https://www.wikidata.org/entity/Q138828544" },
+            "publisher": { "@id": "https://www.wikidata.org/entity/Q138828544" },
+            "offers": {
+              "@type": "Offer",
+              "price": "0",
+              "priceCurrency": "USD",
+              "availability": "https://schema.org/InStock"
+            }
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://doodler.deeflect.com/#website",
+            "name": "Doodler",
+            "url": "https://doodler.deeflect.com/",
+            "publisher": { "@id": "https://www.wikidata.org/entity/Q138828544" },
+            "about": { "@id": "https://doodler.deeflect.com/#app" }
+          },
+          {
+            "@type": "WebPage",
+            "@id": "https://doodler.deeflect.com/#webpage",
+            "url": "https://doodler.deeflect.com/",
+            "name": "Doodler. X, but somebody drew on it.",
+            "description": "Doodler is a tiny Chrome extension that paints over X with paper, doodle icons, Comic Sans, and wobbly borders.",
+            "isPartOf": { "@id": "https://doodler.deeflect.com/#website" },
+            "primaryImageOfPage": {
+              "@type": "ImageObject",
+              "url": "https://doodler.deeflect.com/assets/screenshots/og-image.webp",
+              "width": 1200,
+              "height": 772
+            },
+            "about": { "@id": "https://doodler.deeflect.com/#app" }
+          },
+          {
+            "@type": "Person",
+            "@id": "https://www.wikidata.org/entity/Q138828544",
+            "name": "Dee Kargaev",
+            "givenName": "Dmitrii",
+            "familyName": "Kargaev",
+            "alternateName": ["Dmitry Kargaev", "deeflect"],
+            "url": "https://www.deeflect.com",
+            "sameAs": [
+              "https://www.wikidata.org/entity/Q138828544",
+              "https://github.com/deeflect",
+              "https://x.com/deeflectcom"
+            ]
+          }
+        ]
+      }
+    </script>
+    <script defer src="https://tail.deeflect.com/script.js" data-website-id="d78c7952-65b8-4281-9852-4fe189290923"></script>
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="assets/site.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="/" aria-label="Doodler home">
+        <span class="brand-mark">D</span>
+        <span>Doodler</span>
+      </a>
+      <nav aria-label="Primary">
+        <a href="#install">Install</a>
+        <a href="https://github.com/deeflect/doodler" rel="noreferrer">GitHub</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow">A Chrome extension. For X. Specifically.</p>
+          <h1 id="hero-title">We could not fix X. So we <span class="scribble">drew on it</span>.</h1>
+          <p class="lede">
+            Doodler paints over the timeline with paper, scribbled icons, Comic Sans, and wobbly borders.
+            The posts remain. The visual oppression does not.
+          </p>
+          <div class="actions">
+            <a class="button primary" href="https://chromewebstore.google.com/search/doodler" rel="noreferrer">Install in Chrome</a>
+            <a class="button secondary" href="dist/doodler-extension.zip" download>Download ZIP</a>
+          </div>
+        </div>
+
+        <div class="hero-proof" aria-label="Before and after preview">
+          <figure class="shot before">
+            <span class="tag">Before</span>
+            <img src="assets/screenshots/before.webp" width="1680" height="1083" alt="X before Doodler with the default interface">
+            <figcaption>eww. corporate rectangle soup. you can hear the algorithm breathing.</figcaption>
+          </figure>
+          <figure class="shot after">
+            <span class="tag">After</span>
+            <img src="assets/screenshots/after.webp" width="1680" height="1080" alt="X after Doodler with a hand drawn paper interface">
+            <figcaption>wow. paper. it can no longer hurt you. unless someone tags you.</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="comparison" aria-labelledby="comparison-title">
+        <div>
+          <p class="eyebrow">Scientific evidence. Peer review pending.</p>
+          <h2 id="comparison-title">One of these is a website. The other is a small visual apology.</h2>
+        </div>
+        <div class="comparison-grid">
+          <article>
+            <h3>Before</h3>
+            <p>Dense black panels. Microscopic icons. The faint smell of an algorithm. A productive environment for arguing with strangers and slowly losing your posture.</p>
+          </article>
+          <article>
+            <h3>After</h3>
+            <p>Paper. Wobbly borders. Doodle icons. Buttons you can find without squinting. Still X. Just visibly unserious about it.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="does" aria-labelledby="does-title">
+        <h2 id="does-title" class="sr-only">What it does</h2>
+        <ul class="does-grid">
+          <li><span class="does-tag">does</span> Replace the icons with doodles.</li>
+          <li><span class="does-tag">does</span> Make every surface look like a printer jam.</li>
+          <li><span class="does-tag">does</span> Use Comic Sans, with confidence.</li>
+          <li><span class="does-tag does-not">does not</span> Fix the posts.</li>
+          <li><span class="does-tag does-not">does not</span> Block ads. Get uBlock.</li>
+          <li><span class="does-tag does-not">does not</span> Talk to you about your problems.</li>
+        </ul>
+      </section>
+
+      <section id="install" class="install" aria-labelledby="install-title">
+        <div class="install-copy">
+          <p class="eyebrow">Install</p>
+          <h2 id="install-title">Click button. Add to Chrome. Pretend this was always healthy.</h2>
+          <p>The Chrome Web Store is the polite path. The ZIP is for manual install people, brave souls who already know what Developer mode is and have made peace with their decisions.</p>
+        </div>
+        <ol>
+          <li>Polite path: open the Chrome Web Store listing and click Add to Chrome. Go outside.</li>
+          <li>Manual path: download the ZIP. Unzip the ZIP. We are not making this up.</li>
+          <li>Open <code>chrome://extensions</code>, flip Developer mode on, and click Load unpacked.</li>
+          <li>Select the unzipped Doodler folder. It is annoying. It is legal. It is fine.</li>
+        </ol>
+        <div class="install-actions">
+          <a class="button primary" href="https://chromewebstore.google.com/search/doodler" rel="noreferrer">Install Doodler</a>
+          <a class="button secondary" href="dist/doodler-extension.zip" download>Download ZIP</a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <span>Doodler. Cosmetic damage. On purpose. By a person.</span>
+      <a href="https://github.com/deeflect/doodler" rel="noreferrer">github.com/deeflect/doodler</a>
+    </footer>
+  </body>
+</html>
